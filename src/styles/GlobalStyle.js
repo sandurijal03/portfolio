@@ -24,7 +24,7 @@ const GlobalStyled = createGlobalStyle`
     font-family: 'Nunito', sans-serif;
     font-size:1.2rem;
   }
-  
+
   body {
     background-color: var(--background-dark-color);
     color: var(--font-light-color)
@@ -35,6 +35,17 @@ const GlobalStyled = createGlobalStyle`
     font-family: inherit;
     color:inherit;
     font-size:inherit;
+  }
+
+  h1 {
+    font-size: 4rem;
+    color: var(--white-color);
+    span {
+      font-size: 4rem; 
+    }
+  }
+  span {
+    color: var(--primary-color)
   }
 
 
