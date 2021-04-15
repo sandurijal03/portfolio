@@ -7,11 +7,15 @@ const GlobalStyled = createGlobalStyle`
     --background-dark-color:#10121A;
     --border-color: #2e344e;
     --background-light-color: #f1f1f1;
+    --background-light-color-2: rgba(3,127,255,.3);
     --white-color:#fff;
     --font-light-color:#a4acc4;
     --font-dark-color:#313131;
     --font-dark-color-2:#151515; 
-    --sidebar-dark-color: #191D2B;   
+    --sidebar-dark-color: #191D2B;  
+    --scrollbar-bg-color: #383838;
+    --scrollbar-thump-color: #6b6b6b;
+    --scrollbar-track-color: #383838; 
   }
 
 
@@ -34,7 +38,7 @@ const GlobalStyled = createGlobalStyle`
   a{
     font-family: inherit;
     color:inherit;
-    font-size:inherit;
+    font-size:1rem;
   }
 
   h1 {

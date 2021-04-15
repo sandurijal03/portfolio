@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import avatar from '../img/avatar.jpg';
+import avatar from '../img/dp.jpeg';
 
 const Navigation = () => {
   return (
@@ -11,32 +11,32 @@ const Navigation = () => {
       </div>
       <ul className='nav-items'>
         <li className='nav-item'>
-          <NavLink activeClassName='active-class' to='/home'>
+          <NavLink activeClassName='active-class' to='/' exact>
             Home
           </NavLink>
         </li>
         <li className='nav-item'>
-          <NavLink activeClassName='active-class' to='/about'>
+          <NavLink activeClassName='active-class' to='/about' exact>
             About
           </NavLink>
         </li>
         <li className='nav-item'>
-          <NavLink activeClassName='active-class' to='/resume'>
+          <NavLink activeClassName='active-class' to='/resume' exact>
             Resume
           </NavLink>
         </li>
         <li className='nav-item'>
-          <NavLink activeClassName='active-class' to='/portfolio'>
+          <NavLink activeClassName='active-class' to='/portfolio' exact>
             Portfolio
           </NavLink>
         </li>
         <li className='nav-item'>
-          <NavLink activeClassName='active-class' to='/blogs'>
+          <NavLink activeClassName='active-class' to='/blogs' exact>
             Blogs
           </NavLink>
         </li>
         <li className='nav-item'>
-          <NavLink activeClassName='active-class' to='/contact'>
+          <NavLink activeClassName='active-class' to='/contact' exact>
             Contact
           </NavLink>
         </li>
@@ -83,6 +83,10 @@ const NavigationStyled = styled.nav`
         position: relative;
         padding: 0.2rem 0;
         z-index: 10;
+        text-transform: uppercase;
+        transition: all 0.4s ease-in-out;
+        font-weight: 600;
+        letter-spacing: 1px;
         &:hover {
           cursor: pointer;
         }
