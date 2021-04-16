@@ -46,7 +46,9 @@ const ImageSectionStyled = styled.div`
   .leftContent {
     width: 100%;
     img {
-      width: 80%;
+      width: 90%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -64,6 +66,7 @@ const ImageSectionStyled = styled.div`
 
     .aboutInfo {
       display: flex;
+      padding-bottom: 1.4rem;
       .infoTitle {
         padding-right: 3rem;
         p {
