@@ -34,6 +34,7 @@ const HomePageStyled = styled.header`
   width: 100%;
   height: 100vh;
   position: relative;
+
   .typography {
     position: absolute;
     top: 50%;

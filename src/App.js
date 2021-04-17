@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router';
 import styled from 'styled-components';
+import { Brightness4, Menu } from '@material-ui/icons';
+import { IconButton, Switch as MUSwitch } from '@material-ui/core';
+
 import Sidebar from './components/Sidebar';
 import AboutPage from './pages/AboutPage';
 import BlogsPage from './pages/BlogsPage';
@@ -10,9 +13,49 @@ import PortfolioPage from './pages/PortfolioPage';
 import ResumePage from './pages/ResumePage';
 
 const App = () => {
+  const [theme, setTheme] = useState('darkTheme');
+  const [checked, setChecked] = useState(false);
+  const [navToggle, setNavToggle] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
+
+  const themeToggler = () => {
+    if (theme === 'lightTheme') {
+      setTheme('darkTheme');
+      setChecked(false);
+    } else {
+      setTheme('lightTheme');
+      setChecked(true);
+    }
+  };
+
   return (
     <div className='App'>
-      <Sidebar />
+      <Sidebar navToggle={navToggle} />
+      <div className='theme'>
+        <div className='lightDarkMode'>
+          <div className='leftContent'>
+            <Brightness4 />
+          </div>
+          <div className='rightContent'>
+            <MUSwitch
+              value=''
+              checked={checked}
+              inputProps={{ 'aria-label': '' }}
+              size='medium'
+              onClick={themeToggler}
+            />
+          </div>
+        </div>
+      </div>
+      <div className='hamburgerMenu'>
+        <IconButton onClick={() => setNavToggle(!navToggle)}>
+          <Menu />
+        </IconButton>
+      </div>
+
       <MainContentStyled>
         <div className='lines'>
           <div className='line-1'></div>
@@ -20,6 +63,7 @@ const App = () => {
           <div className='line-3'></div>
           <div className='line-4'></div>
         </div>
+
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route exact path='/about' component={AboutPage} />
@@ -38,12 +82,18 @@ const MainContentStyled = styled.main`
   margin-left: 16.3rem;
   min-height: 100vh;
 
+  @media screen and (max-width: 1200px) {
+    margin-left: 0;
+  }
+
   .lines {
     position: absolute;
     min-height: 100%;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    opacity: 0.4;
+    z-index: -1;
     .line-1,
     .line-2,
     .line-3,
