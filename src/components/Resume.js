@@ -48,6 +48,12 @@ const Resume = () => {
               'worked under the village secreteriat regarding computer works'
             }
           />
+          <ResumeItem
+            year={'2017 - 2019'}
+            title={'Technical Support'}
+            subtitle={''}
+            text={'helps client troubleshooting their network problem'}
+          />
         </div>
       </InnerLayout>
     </ResumeStyled>
