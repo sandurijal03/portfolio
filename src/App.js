@@ -31,8 +31,6 @@ const App = () => {
     }
   };
 
-  let repo_name = 'portfolio';
-
   return (
     <div className='App'>
       <Sidebar navToggle={navToggle} />
@@ -67,12 +65,12 @@ const App = () => {
         </div>
 
         <Routes>
-          <Route path={`/${repo_name}`} element={<HomePage />} />
-          <Route path={`/${repo_name}/about`} element={<AboutPage />} />
-          <Route path={`/${repo_name}/portfolio`} element={<PortfolioPage />} />
-          <Route path={`/${repo_name}/blogs`} element={<BlogsPage />} />
-          <Route path={`/${repo_name}/resume`} element={<ResumePage />} />
-          <Route path={`/${repo_name}/contact`} element={<ContactPage />} />
+          <Route path='/' element={<HomePage />} />
+          <Route path='about' element={<AboutPage />} />
+          <Route path='portfolio' element={<PortfolioPage />} />
+          <Route path='blogs' element={<BlogsPage />} />
+          <Route path='resume' element={<ResumePage />} />
+          <Route path='contact' element={<ContactPage />} />
         </Routes>
       </MainContentStyled>
     </div>
