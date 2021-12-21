@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Switch } from 'react-router';
+import { Route, Routes } from 'react-router';
 import styled from 'styled-components';
 import { Brightness4, Menu } from '@material-ui/icons';
 import { IconButton, Switch as MUSwitch } from '@material-ui/core';
@@ -64,14 +64,14 @@ const App = () => {
           <div className='line-4'></div>
         </div>
 
-        <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route exact path='/about' component={AboutPage} />
-          <Route exact path='/portfolio' component={PortfolioPage} />
-          <Route exact path='/blogs' component={BlogsPage} />
-          <Route exact path='/resume' component={ResumePage} />
-          <Route exact path='/contact' component={ContactPage} />
-        </Switch>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='about' element={<AboutPage />} />
+          <Route path='portfolio' element={<PortfolioPage />} />
+          <Route path='blogs' element={<BlogsPage />} />
+          <Route path='resume' element={<ResumePage />} />
+          <Route path='contact' element={<ContactPage />} />
+        </Routes>
       </MainContentStyled>
     </div>
   );
