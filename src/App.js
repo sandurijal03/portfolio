@@ -65,12 +65,12 @@ const App = () => {
         </div>
 
         <Routes>
-          <Route path='portfolio/' element={<HomePage />} />
-          <Route path='portfolio/about' element={<AboutPage />} />
-          <Route path='portfolio/works' element={<PortfolioPage />} />
-          <Route path='portfolio/blogs' element={<BlogsPage />} />
-          <Route path='portfolio/resume' element={<ResumePage />} />
-          <Route path='portfolio/contact' element={<ContactPage />} />
+          <Route path='/' element={<HomePage />} />
+          <Route path='/about' element={<AboutPage />} />
+          <Route path='/works' element={<PortfolioPage />} />
+          <Route path='/blogs' element={<BlogsPage />} />
+          <Route path='/resume' element={<ResumePage />} />
+          <Route path='/contact' element={<ContactPage />} />
         </Routes>
       </MainContentStyled>
     </div>

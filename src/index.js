@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyled />
-    <Router basename='http://sandurijal03.github.io/portfolio'>
+    <Router>
       <App />
     </Router>
   </React.StrictMode>,
