@@ -65,12 +65,12 @@ const App = () => {
         </div>
 
         <Routes>
-          <Route caseSensitive path='/' element={<HomePage />} />
-          <Route caseSensitive path='/about' element={<AboutPage />} />
-          <Route caseSensitive path='/works' element={<PortfolioPage />} />
-          <Route caseSensitive path='/blogs' element={<BlogsPage />} />
-          <Route caseSensitive path='/resume' element={<ResumePage />} />
-          <Route caseSensitive path='/contact' element={<ContactPage />} />
+          <Route path='portfolio/' element={<HomePage />} />
+          <Route path='portfolio/about' element={<AboutPage />} />
+          <Route path='portfolio/works' element={<PortfolioPage />} />
+          <Route path='portfolio/blogs' element={<BlogsPage />} />
+          <Route path='portfolio/resume' element={<ResumePage />} />
+          <Route path='portfolio/contact' element={<ContactPage />} />
         </Routes>
       </MainContentStyled>
     </div>
