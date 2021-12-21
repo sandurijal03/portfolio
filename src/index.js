@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 ReactDOM.render(
   <>
     <GlobalStyled />
-    <Router>
+    <Router basename='http://sandurijal03.github.io'>
       <App />
     </Router>
   </>,
