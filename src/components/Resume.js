@@ -24,10 +24,12 @@ const Resume = () => {
             text={'Studied physics, chemistry, math, biology,english,nepali'}
           />
           <ResumeItem
-            year={'2016 - Present'}
+            year={'2016 - 2021'}
             title={'Computer Science'}
             subtitle={'Tribhuwan University'}
-            text={'Studied physics, chemistry, math, biology,english,nepali'}
+            text={
+              'Studied c-programming, c++ programming, java programming, sql, advance database, cryptography etc...'
+            }
           />
         </div>
         <div className='smallTitle uSmallTitleMargin'>
@@ -50,9 +52,21 @@ const Resume = () => {
           />
           <ResumeItem
             year={'2017 - 2019'}
-            title={'Technical Support'}
-            subtitle={''}
+            title={'Subisu Cablenet Pvt Ltd'}
+            subtitle={'L1 engineer'}
             text={'helps client troubleshooting their network problem'}
+          />
+          <ResumeItem
+            year={'2019 - 2021'}
+            title={'Freelancer'}
+            subtitle={''}
+            text={'Developed several fullstack mern (graphql) app.'}
+          />
+          <ResumeItem
+            year={'2021 June - Present'}
+            title={'Unilink Software Pvt. Ltd'}
+            subtitle={'Fullstack developer'}
+            text={'Javascript, react, nodejs, mongodb, graphql'}
           />
         </div>
       </InnerLayout>
