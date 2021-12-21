@@ -15,21 +15,17 @@ const ServicesSection = () => {
         <div className='services'>
           <ServiceCard
             image={design}
-            title={'Web Design'}
+            title={'Backend Development'}
             paragraph={'lorem20'}
           />
           <div className='midCard'>
             <ServiceCard
               image={intelligence}
-              title={'Artificial Intelligence'}
+              title={'Frotend Development'}
               paragraph={'lorem20'}
             />
           </div>
-          <ServiceCard
-            image={gamedev}
-            title={'Gamedev'}
-            paragraph={'lorem20'}
-          />
+          <ServiceCard image={gamedev} title={''} paragraph={'lorem20'} />
         </div>
       </ServicesSectionStyled>
     </InnerLayout>

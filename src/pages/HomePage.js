@@ -13,7 +13,9 @@ const HomePage = () => {
         <h1>
           Hi I'm <span>Sandip Rijal</span>
         </h1>
-        <p>I am bsc csit graduate, planning to become a fullstack developer.</p>
+        <p>
+          I am bsc csit graduate, fullstack developer, programming enthusiast.
+        </p>
         <div className='icons'>
           <a href='https://fb.com' className='icon i-facebook' target='__blank'>
             <Facebook />
