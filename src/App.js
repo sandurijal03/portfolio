@@ -65,12 +65,12 @@ const App = () => {
         </div>
 
         <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='about' element={<AboutPage />} />
-          <Route path='portfolio' element={<PortfolioPage />} />
-          <Route path='blogs' element={<BlogsPage />} />
-          <Route path='resume' element={<ResumePage />} />
-          <Route path='contact' element={<ContactPage />} />
+          <Route caseSensitive path='/' element={<HomePage />} />
+          <Route caseSensitive path='/about' element={<AboutPage />} />
+          <Route caseSensitive path='/works' element={<PortfolioPage />} />
+          <Route caseSensitive path='/blogs' element={<BlogsPage />} />
+          <Route caseSensitive path='/resume' element={<ResumePage />} />
+          <Route caseSensitive path='/contact' element={<ContactPage />} />
         </Routes>
       </MainContentStyled>
     </div>
