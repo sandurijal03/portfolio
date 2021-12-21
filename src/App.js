@@ -67,12 +67,12 @@ const App = () => {
         </div>
 
         <Routes>
-          <Route path={`${repo_name}/`} element={<HomePage />} />
-          <Route path={`${repo_name}/about`} element={<AboutPage />} />
-          <Route path={`${repo_name}/portfolio`} element={<PortfolioPage />} />
-          <Route path={`${repo_name}/blogs`} element={<BlogsPage />} />
-          <Route path={`${repo_name}/resume`} element={<ResumePage />} />
-          <Route path={`${repo_name}/contact`} element={<ContactPage />} />
+          <Route path={`/${repo_name}`} element={<HomePage />} />
+          <Route path={`/${repo_name}/about`} element={<AboutPage />} />
+          <Route path={`/${repo_name}/portfolio`} element={<PortfolioPage />} />
+          <Route path={`/${repo_name}/blogs`} element={<BlogsPage />} />
+          <Route path={`/${repo_name}/resume`} element={<ResumePage />} />
+          <Route path={`/${repo_name}/contact`} element={<ContactPage />} />
         </Routes>
       </MainContentStyled>
     </div>
