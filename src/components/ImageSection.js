@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import resume from '../img/main.jpg';
-import PrimaryButton from './PrimaryButton';
+import cv from '../img/sandip_rijal_cv.pdf';
 
 const ImageSection = () => {
   return (
@@ -34,7 +34,12 @@ const ImageSection = () => {
             <p>:Software Development</p>
           </div>
         </div>
-        <PrimaryButton title={'Download cv'} />
+
+        <DownButton href={cv} download='file'>
+          DOWNLOAD CV
+        </DownButton>
+
+        {/* <PrimaryButton title={'Download cv'}></PrimaryButton> */}
       </div>
     </ImageSectionStyled>
   );
@@ -88,6 +93,19 @@ const ImageSectionStyled = styled.div`
       }
     }
   }
+`;
+
+const DownButton = styled.a`
+  padding: 20px;
+  font-size: 1.2rem;
+  background-color: var(--primary-color);
+  outline: none;
+  border: none;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 50px;
 `;
 
 export default ImageSection;
