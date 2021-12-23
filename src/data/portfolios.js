@@ -1,52 +1,52 @@
-import img1 from '../img/portImages/maya-1.jpg';
-import img2 from '../img/portImages/maya-4.jpg';
-import img3 from '../img/portImages/maya-3.jpg';
+import img1 from '../img/portImages/expense-tracker.png';
+import img2 from '../img/portImages/car-rental.png';
+import img3 from '../img/portImages/food-ordering-app.png';
 
 const portfolios = [
   {
     id: 1,
-    category: 'Node',
+    category: 'React',
     image: img1,
-    link1: 'https://www.google.com',
+    link1: 'https://github.com/sandurijal03/expense-tracking',
     link2: 'https://www.google.com',
-    title: 'How To Use Node',
-    text: 'Numper one Programming language',
+    title: 'Expense Tracking Application',
+    text: '',
   },
   {
     id: 2,
     category: 'React',
     image: img3,
-    link1: 'https://www.google.com',
+    link1: 'https://github.com/sandurijal03/food_ordering_app',
     link2: 'https://www.google.com',
-    title: 'How To Animate In Maya',
-    text: 'How react helps in frontend development.',
+    title: 'Food Ordering Application',
+    text: '',
   },
   {
     id: 3,
-    category: 'Javascript',
-    image: img3,
-    link1: 'https://www.google.com',
+    category: 'Node',
+    image: img2,
+    link1: 'https://github.com/sandurijal03/college-work',
     link2: 'https://www.google.com',
-    title: 'How To Animate In Maya',
-    text: 'Number one Animation Application',
+    title: 'Car Rental Application',
+    text: '',
   },
   {
     id: 4,
     category: 'Graphql',
     image: img2,
-    link1: 'https://www.google.com',
+    link1: 'https://github.com/sandurijal03/event-booking',
     link2: 'https://www.google.com',
-    title: 'How To Use Blender',
-    text: 'Free Animation Software',
+    title: 'Event Booking Api with graphql',
+    text: '',
   },
   {
     id: 5,
     category: 'Mongodb',
     image: img2,
-    link1: 'https://www.google.com',
+    link1: 'https://github.com/sandurijal03/event-booking-app',
     link2: 'https://www.google.com',
-    title: 'How To Use Blender',
-    text: 'Free Animation Software',
+    title: 'Event Booking Fullstack',
+    text: '',
   },
 ];
 
