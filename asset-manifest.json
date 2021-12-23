@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.6edd99aa.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.6edd99aa.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.22d961d9.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.22d961d9.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.0bf68c44.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.0bf68c44.js.map",
     "static/js/2.8f5337db.chunk.js": "/portfolio/static/js/2.8f5337db.chunk.js",
@@ -13,17 +13,17 @@
     "static/media/blog3.6291ee7c.svg": "/portfolio/static/media/blog3.6291ee7c.svg",
     "static/media/blog4.60aa6cec.svg": "/portfolio/static/media/blog4.60aa6cec.svg",
     "static/media/blog5.2599a6b1.svg": "/portfolio/static/media/blog5.2599a6b1.svg",
+    "static/media/car-rental.d1b77662.png": "/portfolio/static/media/car-rental.d1b77662.png",
     "static/media/design.8ecb3043.svg": "/portfolio/static/media/design.8ecb3043.svg",
+    "static/media/expense-tracker.950bcb38.png": "/portfolio/static/media/expense-tracker.950bcb38.png",
+    "static/media/food-ordering-app.4d4888ec.png": "/portfolio/static/media/food-ordering-app.4d4888ec.png",
     "static/media/game-dev.20147858.svg": "/portfolio/static/media/game-dev.20147858.svg",
     "static/media/intelligence.11bd2ab2.svg": "/portfolio/static/media/intelligence.11bd2ab2.svg",
-    "static/media/main.75f8143f.jpg": "/portfolio/static/media/main.75f8143f.jpg",
-    "static/media/maya-1.8f184556.jpg": "/portfolio/static/media/maya-1.8f184556.jpg",
-    "static/media/maya-3.8bd072e0.jpg": "/portfolio/static/media/maya-3.8bd072e0.jpg",
-    "static/media/maya-4.98e8029e.jpg": "/portfolio/static/media/maya-4.98e8029e.jpg"
+    "static/media/main.75f8143f.jpg": "/portfolio/static/media/main.75f8143f.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.0bf68c44.js",
     "static/js/2.8f5337db.chunk.js",
-    "static/js/main.6edd99aa.chunk.js"
+    "static/js/main.22d961d9.chunk.js"
   ]
 }
