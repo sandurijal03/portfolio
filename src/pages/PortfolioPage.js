@@ -10,7 +10,6 @@ const allButtons = ['All', ...new Set(portfolios.map((item) => item.category))];
 
 const PortfolioPage = () => {
   const [menuItem, setMenuItems] = useState(portfolios);
-  // eslint-disable-next-line no-unused-vars
   const [button, setButtons] = useState(allButtons);
 
   const filter = (button) => {
