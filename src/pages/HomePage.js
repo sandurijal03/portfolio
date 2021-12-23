@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Particle from '../components/Particle';
-import { Facebook, Twitter, GitHub } from '@material-ui/icons';
+import { LinkedIn, Twitter, GitHub } from '@material-ui/icons';
 
 const HomePage = () => {
   return (
@@ -14,18 +14,33 @@ const HomePage = () => {
           Hi I'm <span>Sandip Rijal</span>
         </h1>
         <p>
-          I am bsc csit graduate, fullstack developer, programming enthusiast.
+          I am bsc csit graduate, fullstack developer, javascript enthusiast.
         </p>
         <div className='icons'>
-          <a href='https://fb.com' className='icon i-facebook' target='__blank'>
-            <Facebook />
+          <a
+            href='https://www.linkedin.com/in/sanduriijal03'
+            rel='noreferrer'
+            className='icon i-facebook'
+            target='__blank'
+          >
+            <LinkedIn />
           </a>
-          <div className='icon i-twitter'>
+          <a
+            href='https://twitter.com/geek_js_nerd'
+            rel='noreferrer'
+            target='_blank'
+            className='icon i-twitter'
+          >
             <Twitter />
-          </div>
-          <div className='icon i-github'>
+          </a>
+          <a
+            href='https://github.com/sandurijal03'
+            rel='noreferrer'
+            target='_blank'
+            className='icon i-github'
+          >
             <GitHub />
-          </div>
+          </a>
         </div>
       </div>
     </HomePageStyled>
