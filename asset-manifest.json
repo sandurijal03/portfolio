@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.c71ef0bf.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.c71ef0bf.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.cbd150c8.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.cbd150c8.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.0bf68c44.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.0bf68c44.js.map",
     "static/js/2.23fedc46.chunk.js": "/portfolio/static/js/2.23fedc46.chunk.js",
@@ -14,6 +14,7 @@
     "static/media/blog4.60aa6cec.svg": "/portfolio/static/media/blog4.60aa6cec.svg",
     "static/media/blog5.2599a6b1.svg": "/portfolio/static/media/blog5.2599a6b1.svg",
     "static/media/car-rental.d1b77662.png": "/portfolio/static/media/car-rental.d1b77662.png",
+    "static/media/color-generator.58ab72da.jpg": "/portfolio/static/media/color-generator.58ab72da.jpg",
     "static/media/design.8ecb3043.svg": "/portfolio/static/media/design.8ecb3043.svg",
     "static/media/expense-tracker.950bcb38.png": "/portfolio/static/media/expense-tracker.950bcb38.png",
     "static/media/food-ordering-app.4d4888ec.png": "/portfolio/static/media/food-ordering-app.4d4888ec.png",
@@ -25,6 +26,6 @@
   "entrypoints": [
     "static/js/runtime-main.0bf68c44.js",
     "static/js/2.23fedc46.chunk.js",
-    "static/js/main.c71ef0bf.chunk.js"
+    "static/js/main.cbd150c8.chunk.js"
   ]
 }
