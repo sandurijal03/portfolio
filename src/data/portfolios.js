@@ -1,6 +1,7 @@
 import img1 from '../img/portImages/expense-tracker.png';
 import img2 from '../img/portImages/car-rental.png';
 import img3 from '../img/portImages/food-ordering-app.png';
+import img4 from '../img/portImages/color-generator.jpg';
 
 const portfolios = [
   {
@@ -31,21 +32,21 @@ const portfolios = [
     text: '',
   },
   {
+    id: 5,
+    category: 'React',
+    image: img4,
+    link1: 'https://github.com/sandurijal03/color_generator',
+    link2: 'https://www.google.com',
+    title: 'Random Color Generator',
+    text: '',
+  },
+  {
     id: 4,
     category: 'Graphql',
     image: img2,
     link1: 'https://github.com/sandurijal03/event-booking',
     link2: 'https://www.google.com',
     title: 'Event Booking Api with graphql',
-    text: '',
-  },
-  {
-    id: 5,
-    category: 'Mongodb',
-    image: img2,
-    link1: 'https://github.com/sandurijal03/event-booking-app',
-    link2: 'https://www.google.com',
-    title: 'Event Booking Fullstack',
     text: '',
   },
 ];
