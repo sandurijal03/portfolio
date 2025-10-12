@@ -121,7 +121,7 @@ export const education: Education[] = [
     degree: 'Computer Science',
     institution: 'Tribhuwan University',
     location: 'Nepal',
-    duration: '2016 - 2020',
+    duration: '2016 - 2022',
     description:
       'Studied C programming, C++ programming, Java programming, SQL, advanced database, cryptography, data structures, algorithms, software engineering, and computer networks.',
     type: 'education',
