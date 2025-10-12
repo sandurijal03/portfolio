@@ -38,7 +38,6 @@ export const personalInfo = {
   location: 'Kathmandu, Nepal',
   github: 'github.com/sandurijal03',
   linkedin: 'linkedin.com/in/sandurijal03',
-  twitter: '@geek_js_nerd',
   website: 'sandurijal03.github.io/portfolio',
 }
 
@@ -121,7 +120,7 @@ export const education: Education[] = [
     degree: 'Computer Science',
     institution: 'Tribhuwan University',
     location: 'Nepal',
-    duration: '2016 - 2020',
+    duration: '2016 - 2022',
     description:
       'Studied C programming, C++ programming, Java programming, SQL, advanced database, cryptography, data structures, algorithms, software engineering, and computer networks.',
     type: 'education',

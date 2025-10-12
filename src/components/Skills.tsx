@@ -15,7 +15,7 @@ const Skills = () => {
         <div className='skills'>
           {skillsData.map((skill, index) => (
             <Progress
-              key={index}
+              key={skill.name}
               title={skill.name}
               width={`${skill.level}%`}
               text={`${skill.level}%`}
