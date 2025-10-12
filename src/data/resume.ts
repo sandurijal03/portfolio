@@ -38,7 +38,6 @@ export const personalInfo = {
   location: 'Kathmandu, Nepal',
   github: 'github.com/sandurijal03',
   linkedin: 'linkedin.com/in/sandurijal03',
-  twitter: '@geek_js_nerd',
   website: 'sandurijal03.github.io/portfolio',
 }
 
