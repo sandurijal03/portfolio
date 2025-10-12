@@ -10,59 +10,73 @@ import ContactPage from './pages/ContactPage'
 import HomePage from './pages/HomePage'
 import PortfolioPage from './pages/PortfolioPage'
 import ResumePage from './pages/ResumePage'
+import CVPage from './pages/CVPage'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 export const Main = () => {
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
+      {
+        path: '/',
+        element: (
+          <App>
+            <HomePage />
+          </App>
+        ),
+      },
+      {
+        path: '/works',
+        element: (
+          <App>
+            <PortfolioPage />
+          </App>
+        ),
+      },
+      {
+        path: '/blogs',
+        element: (
+          <App>
+            <BlogsPage />
+          </App>
+        ),
+      },
+      {
+        path: '/resume',
+        element: (
+          <App>
+            <ResumePage />
+          </App>
+        ),
+      },
+      {
+        path: '/contact',
+        element: (
+          <App>
+            <ContactPage />
+          </App>
+        ),
+      },
+      {
+        path: '/cv',
+        element: (
+          <App>
+            <CVPage />
+          </App>
+        ),
+      },
+      {
+        path: '*',
+        element: (
+          <App>
+            <h1>404! Page Not Found</h1>
+          </App>
+        ),
+      },
+    ],
     {
-      path: '/portfolio',
-      element: (
-        <App>
-          <HomePage />
-        </App>
-      ),
+      basename: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
     },
-    {
-      path: '/about',
-      element: (
-        <App>
-          <AboutPage />
-        </App>
-      ),
-    },
-    {
-      path: '/works',
-      element: (
-        <App>
-          <PortfolioPage />
-        </App>
-      ),
-    },
-    {
-      path: '/blogs',
-      element: (
-        <App>
-          <BlogsPage />
-        </App>
-      ),
-    },
-    {
-      path: '/resume',
-      element: (
-        <App>
-          <ResumePage />
-        </App>
-      ),
-    },
-    {
-      path: '/contact',
-      element: (
-        <App>
-          <ContactPage />
-        </App>
-      ),
-    },
-  ])
+  )
   return <RouterProvider router={router} />
 }
 
@@ -91,7 +105,7 @@ const App: React.FC<AppProps> = ({ children }) => {
 
   return (
     <div className='App'>
-      <Sidebar navToggle={navToggle} />
+      <Sidebar navToggle={navToggle} className='sidebar' />
       <div className='theme'>
         <div className='lightDarkMode'>
           <div className='leftContent'>

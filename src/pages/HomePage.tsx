@@ -27,14 +27,6 @@ const HomePage = () => {
             <LinkedIn />
           </a>
           <a
-            href='https://twitter.com/geek_js_nerd'
-            rel='noreferrer'
-            target='_blank'
-            className='icon i-twitter'
-          >
-            <Twitter />
-          </a>
-          <a
             href='https://github.com/sandurijal03'
             rel='noreferrer'
             target='_blank'

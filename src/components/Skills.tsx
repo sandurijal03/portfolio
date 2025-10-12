@@ -1,29 +1,31 @@
-import React from 'react';
-import styled from 'styled-components';
-import { InnerLayout } from '../styles/Layouts';
-import Progress from './Progress';
-import Title from './Title';
+import React from 'react'
+import styled from 'styled-components'
+import { InnerLayout } from '../styles/Layouts'
+import Progress from './Progress'
+import Title from './Title'
+import { getSkillsForResume } from '../data/resume'
 
 const Skills = () => {
+  const skillsData = getSkillsForResume()
+
   return (
     <SkillsStyled>
-      <Title title={'My  Skills'} span={'My Skills'} />
+      <Title title={'My Skills'} span={'My Skills'} />
       <InnerLayout>
         <div className='skills'>
-          <Progress title={'HTML5'} width={'95%'} text={'95%'} />
-          <Progress title={'CSS3'} width={'95%'} text={'95%'} />
-          <Progress title={'TS'} width={'80%'} text={'80%'} />
-          <Progress title={'JS'} width={'90%'} text={'90%'} />
-          <Progress title={'REACT'} width={'95%'} text={'95%'} />
-          <Progress title={'NODE'} width={'95%'} text={'90%'} />
-          <Progress title={'GRAPHQL'} width={'95%'} text={'95%'} />
-          <Progress title={'RUST'} width={'75%'} text={'75%'} />
-          <Progress title={'DotNet'} width={'50%'} text={'50%'} />
+          {skillsData.map((skill, index) => (
+            <Progress
+              key={index}
+              title={skill.name}
+              width={`${skill.level}%`}
+              text={`${skill.level}%`}
+            />
+          ))}
         </div>
       </InnerLayout>
     </SkillsStyled>
-  );
-};
+  )
+}
 
 const SkillsStyled = styled.section`
   .skills {
@@ -36,6 +38,6 @@ const SkillsStyled = styled.section`
       grid-template-columns: repeat(1, 1fr);
     }
   }
-`;
+`
 
-export default Skills;
+export default Skills

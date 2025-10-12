@@ -13,19 +13,19 @@ const Navigation = () => {
         <li className='nav-item'>
           <NavLink
             className={({ isActive }) => (isActive ? 'active-class' : '')}
-            to='/portfolio'
+            to='/'
           >
             Home
           </NavLink>
         </li>
-        <li className='nav-item'>
+        {/* <li className='nav-item'>
           <NavLink
             className={({ isActive }) => (isActive ? 'active-class' : '')}
             to='/about'
           >
             About
           </NavLink>
-        </li>
+        </li> */}
         <li className='nav-item'>
           <NavLink
             className={({ isActive }) => (isActive ? 'active-class' : '')}
@@ -37,12 +37,20 @@ const Navigation = () => {
         <li className='nav-item'>
           <NavLink
             className={({ isActive }) => (isActive ? 'active-class' : '')}
+            to='/cv'
+          >
+            CV
+          </NavLink>
+        </li>
+        <li className='nav-item'>
+          <NavLink
+            className={({ isActive }) => (isActive ? 'active-class' : '')}
             to='/works'
           >
             Portfolio
           </NavLink>
         </li>
-       
+
         <li className='nav-item'>
           <NavLink
             className={({ isActive }) => (isActive ? 'active-class' : '')}
@@ -53,7 +61,7 @@ const Navigation = () => {
         </li>
       </ul>
       <footer className='footer'>
-        <p>@{new Date().getFullYear()} My Portfolio website</p>
+        <p>@{new Date().getFullYear()} My Portfolio</p>
       </footer>
     </NavigationStyled>
   )

@@ -5,75 +5,46 @@ import SmallTitle from './SmallTitle'
 import Title from './Title'
 import { BusinessCenter, School } from '@material-ui/icons'
 import ResumeItem from './ResumeItem'
+import { getExperienceForResume, getEducationForResume } from '../data/resume'
 
 const Resume = () => {
   const briefCase = <BusinessCenter />
   const school = <School />
+
+  const workExperience = getExperienceForResume()
+  const educationData = getEducationForResume()
+
   return (
     <ResumeStyled>
       <Title title={'Resume'} span={'Resume'} />
       <InnerLayout>
         <div className='smallTitle'>
-          <SmallTitle icon={school} title={'Study'} />
+          <SmallTitle icon={school} title={'Education'} />
         </div>
         <div className='resumeContent'>
-          <ResumeItem
-            year={'2014 - 2015'}
-            title={'High School'}
-            subtitle={'Kanchanjunga  English High School'}
-            text={'Studied physics, chemistry, math, biology,english,nepali'}
-          />
-          <ResumeItem
-            year={'2016 - 2020'}
-            title={'Computer Science'}
-            subtitle={'Tribhuwan University'}
-            text={
-              'Studied c-programming, c++ programming, java programming, sql, advance database, cryptography etc...'
-            }
-          />
+          {educationData.map((item, index) => (
+            <ResumeItem
+              key={index}
+              year={item.year}
+              title={item.title}
+              subtitle={item.subtitle}
+              text={item.text}
+            />
+          ))}
         </div>
         <div className='smallTitle uSmallTitleMargin'>
-          <SmallTitle icon={briefCase} title={'Working experience'} />
+          <SmallTitle icon={briefCase} title={'Working Experience'} />
         </div>
         <div className='resumeContent'>
-          <ResumeItem
-            year={'2014 - 2015'}
-            title={'School Teacher'}
-            subtitle={'Sigma English School'}
-            text={'Taught Math, Science, Optional Math'}
-          />
-          <ResumeItem
-            year={'2015 - 2016'}
-            title={'Computer Operator'}
-            subtitle={'Haldibari VDC'}
-            text={
-              'worked under the village secreteriat regarding computer works'
-            }
-          />
-          <ResumeItem
-            year={'2017 - 2019'}
-            title={'Subisu Cablenet Pvt Ltd'}
-            subtitle={'L1 engineer'}
-            text={'helps client troubleshooting their network problem'}
-          />
-          <ResumeItem
-            year={'2019 - 2021'}
-            title={'Freelancer'}
-            subtitle={''}
-            text={'Developed several fullstack mern (graphql) app.'}
-          />
-          <ResumeItem
-            year={'2021 June - 2021 December'}
-            title={'Unilink Software Pvt. Ltd'}
-            subtitle={'Fullstack developer'}
-            text={'Javascript, react, nodejs, mongodb, graphql'}
-          />
-          <ResumeItem
-            year={'2022 March - Present'}
-            title={'Norbrik Solution Pty Ltd'}
-            subtitle={'Fullstack developer'}
-            text={'Javascript,Typescript, react, nodejs, azure sql, dotnet'}
-          />
+          {workExperience.slice(0, 6).map((item, index) => (
+            <ResumeItem
+              key={index}
+              year={item.year}
+              title={item.title}
+              subtitle={item.subtitle}
+              text={item.text}
+            />
+          ))}
         </div>
       </InnerLayout>
     </ResumeStyled>
@@ -90,7 +61,24 @@ const ResumeStyled = styled.section`
   }
 
   .resumeContent {
-    border-left: 2px solid var(--border-color);
+    border-left: 3px solid var(--border-color);
+    position: relative;
+    padding-left: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(
+        180deg,
+        var(--primary-color),
+        var(--border-color)
+      );
+      opacity: 0.7;
+    }
   }
 `
 
