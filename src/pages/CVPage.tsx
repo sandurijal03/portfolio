@@ -14,7 +14,7 @@ import { personalInfo, workExperience, education, skills } from '../data/resume'
 const PrintStyles = createGlobalStyle`
   @media print {
     @page {
-      margin: 0.5in;
+      margin: 0.2in;
       size: A4;
     }
     
@@ -22,22 +22,26 @@ const PrintStyles = createGlobalStyle`
     * {
       -webkit-print-color-adjust: exact !important;
       print-color-adjust: exact !important;
+      box-sizing: border-box !important;
     }
     
     html, body {
-      font-size: 11px !important;
-      line-height: 1.4 !important;
-      color: black !important;
+      font-size: 10px !important;
+      line-height: 1.3 !important;
+      color: #000 !important;
       background: white !important;
       margin: 0 !important;
       padding: 0 !important;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+      width: 100% !important;
+      height: 100% !important;
     }
     
-
     #sidebar {
       display: none !important;
     }
-    /* Hide only specific navigation elements */
+    
+    /* Hide navigation elements */
     div[class*="SidebarStyled"],
     div[class*="NavigationStyled"],
     .theme,
@@ -46,42 +50,133 @@ const PrintStyles = createGlobalStyle`
       visibility: hidden !important;
     }
 
-    /* Ensure CV content is visible */
-    div[class*="CVContainer"],
-    section,
-    header,
-    h1, h2, h3, h4, h5, h6,
-    p, div, span, ul, ol, li {
+    /* Ensure CV content takes full width */
+    div[class*="CVContainer"] {
       display: block !important;
       visibility: visible !important;
-      color: black !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: white !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
     }
 
-    /* Inline elements should remain inline */
-    span, strong, em, i, b {
-      display: inline !important;
+    /* Make sections full width */
+    section,
+    div[class*="Section"] {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 8px 0 !important;
     }
 
-    /* List items should be list-item */
-    li {
-      display: list-item !important;
+    /* Make header full width */
+    header,
+    div[class*="Header"] {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 8px 0 !important;
     }
-    
-    h1, h2, h3, h4, h5, h6 {
-      page-break-after: avoid;
-      color: black !important;
-      font-weight: bold !important;
+
+    /* Typography improvements */
+    h1 {
+      font-size: 18px !important;
+      font-weight: 700 !important;
+      margin-bottom: 4px !important;
+      color: #000 !important;
     }
-    
-    p, ul, ol {
+
+    h2 {
+      font-size: 11px !important;
+      font-weight: 600 !important;
+      color: #333 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.5px !important;
+      margin-bottom: 6px !important;
+    }
+
+    h3 {
+      font-size: 12px !important;
+      font-weight: 600 !important;
+      color: #000 !important;
+      margin-bottom: 8px !important;
+      border-bottom: 1px solid #333 !important;
+      padding-bottom: 3px !important;
+    }
+
+    h4 {
+      font-size: 11px !important;
+      font-weight: 600 !important;
+      color: #000 !important;
+      margin: 0 0 3px 0 !important;
+    }
+
+    p {
+      font-size: 9px !important;
+      line-height: 1.3 !important;
+      margin: 4px 0 !important;
+      color: #333 !important;
+    }
+
+    /* Section improvements */
+    section {
+      margin-bottom: 12px !important;
       page-break-inside: avoid;
-      orphans: 3;
-      widows: 3;
     }
 
-    /* Hide only the PDF button */
+    /* Hide buttons */
     button {
       display: none !important;
+    }
+
+    /* List improvements */
+    ul, ol {
+      margin: 4px 0 !important;
+      padding-left: 12px !important;
+    }
+
+    li {
+      font-size: 9px !important;
+      line-height: 1.3 !important;
+      margin-bottom: 2px !important;
+      color: #333 !important;
+    }
+
+    /* Contact info improvements */
+    div[class*="ContactItem"] {
+      font-size: 8px !important;
+      margin-bottom: 2px !important;
+    }
+
+    /* Experience items */
+    div[class*="ExperienceItem"] {
+      margin-bottom: 10px !important;
+      padding-left: 12px !important;
+      border-left: 2px solid #000 !important;
+    }
+
+    /* Skills and achievements */
+    div[class*="AchievementItem"] {
+      margin-bottom: 8px !important;
+      padding: 8px !important;
+      border: 1px solid #ddd !important;
+      border-radius: 0 !important;
+    }
+
+    /* Icon handling */
+    svg {
+      width: 8px !important;
+      height: 8px !important;
+      color: #000 !important;
+    }
+
+    /* Ensure proper spacing */
+    strong {
+      font-weight: 600 !important;
+      color: #000 !important;
     }
   }
 `
@@ -426,12 +521,13 @@ const Header = styled.header`
   overflow: hidden;
 
   @media print {
-    background: white !important;
+    background: #f8f9fa !important;
     color: black !important;
-    padding: 15px 20px 10px 20px !important;
-    border-bottom: 2px solid #333 !important;
+    padding: 12px 0 12px 0 !important;
+    border-bottom: 3px solid #000 !important;
     page-break-after: avoid;
-    margin-bottom: 0 !important;
+    margin-bottom: 8px !important;
+    text-align: center !important;
   }
 
   @media (max-width: 768px) {
@@ -454,11 +550,11 @@ const HeaderContent = styled.div`
   }
 
   @media print {
-    grid-template-columns: 2fr 1fr !important;
-    gap: 20px !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
     max-width: none !important;
     margin: 0 !important;
-    align-items: start !important;
+    text-align: center !important;
   }
 `
 
@@ -525,10 +621,13 @@ const ContactInfo = styled.div`
   border-left: 3px solid var(--border-color);
 
   @media print {
-    gap: 6px !important;
-    padding-left: 15px !important;
-    border-left: 2px solid #333 !important;
-    font-size: 10px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    border: none !important;
+    margin-top: 8px !important;
   }
 
   @media (max-width: 768px) {
@@ -565,19 +664,26 @@ const ContactItem = styled.div`
   }
 
   @media print {
-    font-size: 10px !important;
-    line-height: 1.3 !important;
+    font-size: 8px !important;
+    line-height: 1.2 !important;
     color: #333 !important;
+    margin: 0 6px !important;
 
     &:hover {
       color: #333 !important;
     }
 
     svg {
-      width: 12px !important;
-      height: 12px !important;
-      margin-right: 8px !important;
+      width: 8px !important;
+      height: 8px !important;
+      margin-right: 4px !important;
       color: #000 !important;
+    }
+
+    &:not(:last-child)::after {
+      content: ' • ';
+      color: #666;
+      margin-left: 6px;
     }
   }
 `
@@ -591,9 +697,10 @@ const Section = styled.section`
   }
 
   @media print {
-    padding: 12px 30px !important;
+    padding: 8px 0 !important;
+    margin-bottom: 10px !important;
     page-break-inside: avoid;
-    border-bottom: 1px solid #ddd !important;
+    border-bottom: none !important;
   }
 
   @media (max-width: 768px) {
@@ -612,11 +719,14 @@ const SectionTitle = styled.h3`
   letter-spacing: 1px;
 
   @media print {
-    font-size: 1.2em !important;
-    margin-bottom: 16px !important;
-    padding-bottom: 8px !important;
-    border-bottom-width: 2px !important;
-    color: black !important;
+    font-size: 12px !important;
+    margin-bottom: 6px !important;
+    padding-bottom: 2px !important;
+    border-bottom: 1px solid #000 !important;
+    color: #000 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
   }
 `
 

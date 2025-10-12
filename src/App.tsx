@@ -105,7 +105,7 @@ const App: React.FC<AppProps> = ({ children }) => {
 
   return (
     <div className='App'>
-      <Sidebar navToggle={navToggle} className='sidebar' />
+      <Sidebar navToggle={navToggle} />
       <div className='theme'>
         <div className='lightDarkMode'>
           <div className='leftContent'>
