@@ -29,7 +29,7 @@
  */
 
 /**
- * @remix-run/router v1.13.1
+ * @remix-run/router v1.23.0
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -48,7 +48,7 @@
  */
 
 /**
- * React Router DOM v6.20.1
+ * React Router DOM v6.30.1
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -59,7 +59,7 @@
  */
 
 /**
- * React Router v6.20.1
+ * React Router v6.30.1
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -67,18 +67,6 @@
  * LICENSE.md file in the root directory of this source tree.
  *
  * @license MIT
- */
-
-/** @license Material-UI v4.11.3
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-/** @license Material-UI v4.12.4
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
  */
 
 /** @license React v16.13.1
