@@ -222,10 +222,7 @@ const CVPage: React.FC = () => {
                 <LinkedIn />
                 <span>{personalInfo.linkedin}</span>
               </ContactItem>
-              <ContactItem>
-                <Twitter />
-                <span>{personalInfo.twitter}</span>
-              </ContactItem>
+
               <ContactItem>
                 <Language />
                 <span>{personalInfo.website}</span>
