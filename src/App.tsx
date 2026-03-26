@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { Brightness4, Menu } from '@material-ui/icons'
-import { IconButton, Switch as MUSwitch } from '@material-ui/core'
+import {
+  Brightness4,
+  Menu,
+  IconButton,
+  Switch as MUSwitch,
+} from '@mui/icons-material'
 
 import Sidebar from './components/Sidebar'
 import AboutPage from './pages/AboutPage'
