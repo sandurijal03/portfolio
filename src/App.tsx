@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Brightness4, Menu, Menu as IconButton } from '@mui/icons-material';
+import { Brightness4, Menu } from '@mui/icons-material';
+import { IconButton, Switch as MUSwitch } from '@mui/material';
 
 import Sidebar from './components/Sidebar';
 import AboutPage from './pages/AboutPage';
