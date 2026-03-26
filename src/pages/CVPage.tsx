@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
+import React, { useState, useEffect } from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
+import Email from '@mui/icons-material/Email';
+import GitHub from '@mui/icons-material/GitHub';
+import Language from '@mui/icons-material/Language';
+import LinkedIn from '@mui/icons-material/LinkedIn';
+import LocationOn from '@mui/icons-material/LocationOn';
+import Twitter from '@mui/icons-material/Twitter';
 import {
-  Email,
-  GitHub,
-  Language,
-  LinkedIn,
-  LocationOn,
-  Twitter,
-} from '@mui/icons-material'
-import { personalInfo, workExperience, education, skills } from '../data/resume'
+  personalInfo,
+  workExperience,
+  education,
+  skills,
+} from '../data/resume';
 
 // Global print styles
 const PrintStyles = createGlobalStyle`
@@ -179,19 +182,19 @@ const PrintStyles = createGlobalStyle`
       color: #000 !important;
     }
   }
-`
+`;
 
 // CV Component with integrated styling
 const CVPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true)
-  }, [])
+    setIsVisible(true);
+  }, []);
 
   const handleDownloadPDF = () => {
-    window.print()
-  }
+    window.print();
+  };
 
   return (
     <>
@@ -470,8 +473,8 @@ const CVPage: React.FC = () => {
         </PDFButton>
       </CVContainer>
     </>
-  )
-}
+  );
+};
 
 // Styled Components (adapted for portfolio theme)
 const CVContainer = styled.div<{ $isVisible: boolean }>`
@@ -507,7 +510,7 @@ const CVContainer = styled.div<{ $isVisible: boolean }>`
   @media (max-width: 768px) {
     margin: 10px;
   }
-`
+`;
 
 const Header = styled.header`
   background: var(--background-dark-color);
@@ -530,7 +533,7 @@ const Header = styled.header`
   @media (max-width: 768px) {
     padding: 30px 20px;
   }
-`
+`;
 
 const HeaderContent = styled.div`
   display: grid;
@@ -553,7 +556,7 @@ const HeaderContent = styled.div`
     margin: 0 !important;
     text-align: center !important;
   }
-`
+`;
 
 const PersonalInfo = styled.div`
   h1 {
@@ -595,7 +598,7 @@ const PersonalInfo = styled.div`
       letter-spacing: 0.5px !important;
     }
   }
-`
+`;
 
 const Tagline = styled.p`
   font-size: 1.1em;
@@ -609,7 +612,7 @@ const Tagline = styled.p`
     margin-top: 4px !important;
     color: #666 !important;
   }
-`
+`;
 
 const ContactInfo = styled.div`
   display: grid;
@@ -634,7 +637,7 @@ const ContactInfo = styled.div`
     padding-top: 20px;
     margin-top: 20px;
   }
-`
+`;
 
 const ContactItem = styled.div`
   display: flex;
@@ -683,7 +686,7 @@ const ContactItem = styled.div`
       margin-left: 6px;
     }
   }
-`
+`;
 
 const Section = styled.section`
   padding: 25px 40px;
@@ -703,7 +706,7 @@ const Section = styled.section`
   @media (max-width: 768px) {
     padding: 20px;
   }
-`
+`;
 
 const SectionTitle = styled.h3`
   font-size: 1.4em;
@@ -725,7 +728,7 @@ const SectionTitle = styled.h3`
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
   }
-`
+`;
 
 const SectionContent = styled.div`
   font-size: 0.95em;
@@ -743,7 +746,7 @@ const SectionContent = styled.div`
       color: black !important;
     }
   }
-`
+`;
 
 const SkillsGrid = styled.div`
   display: grid;
@@ -754,7 +757,7 @@ const SkillsGrid = styled.div`
     gap: 12px !important;
     font-size: 0.85em !important;
   }
-`
+`;
 
 const SkillCategory = styled.div`
   margin-bottom: 20px;
@@ -782,7 +785,7 @@ const SkillCategory = styled.div`
       padding-bottom: 4px !important;
     }
   }
-`
+`;
 
 const SkillsList = styled.div`
   line-height: 1.8;
@@ -795,7 +798,7 @@ const SkillsList = styled.div`
     font-size: 0.85em !important;
     color: black !important;
   }
-`
+`;
 
 const SkillTag = styled.span<{ $isPrimary?: boolean; $delay?: number }>`
   font-weight: ${(props) => (props.$isPrimary ? '600' : '400')};
@@ -824,7 +827,7 @@ const SkillTag = styled.span<{ $isPrimary?: boolean; $delay?: number }>`
       color: #ccc !important;
     }
   }
-`
+`;
 
 const ExperienceItem = styled.div`
   margin-bottom: 20px;
@@ -838,7 +841,7 @@ const ExperienceItem = styled.div`
     border-left-width: 2px !important;
     break-inside: avoid;
   }
-`
+`;
 
 const ExperienceHeader = styled.div`
   margin-bottom: 12px;
@@ -888,13 +891,13 @@ const ExperienceHeader = styled.div`
       gap: 4px;
     }
   }
-`
+`;
 
 const Company = styled.span`
   color: var(--primary-color);
   font-weight: 600;
   font-size: 1em;
-`
+`;
 
 const Location = styled.span`
   color: var(--white-color-2);
@@ -903,7 +906,7 @@ const Location = styled.span`
   @media print {
     color: #666 !important;
   }
-`
+`;
 
 const Duration = styled.span`
   color: var(--white-color-2);
@@ -917,7 +920,7 @@ const Duration = styled.span`
     color: #666 !important;
     background: #f0f0f0 !important;
   }
-`
+`;
 
 const TechTags = styled.div`
   margin-top: 12px;
@@ -939,7 +942,7 @@ const TechTags = styled.div`
       color: #000 !important;
     }
   }
-`
+`;
 
 const SkillsUsed = styled.div`
   margin-top: 12px;
@@ -960,7 +963,7 @@ const SkillsUsed = styled.div`
     font-size: 0.8em !important;
     color: #666 !important;
   }
-`
+`;
 
 const Highlights = styled.div`
   display: grid;
@@ -971,7 +974,7 @@ const Highlights = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
-`
+`;
 
 const HighlightItem = styled.div`
   display: flex;
@@ -1007,7 +1010,7 @@ const HighlightItem = styled.div`
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-`
+`;
 
 const AchievementsGrid = styled.div`
   display: grid;
@@ -1024,7 +1027,7 @@ const AchievementsGrid = styled.div`
     gap: 20px !important;
     margin-top: 15px !important;
   }
-`
+`;
 
 const AchievementItem = styled.div`
   display: flex;
@@ -1085,7 +1088,7 @@ const AchievementItem = styled.div`
       margin-right: 15px;
     }
   }
-`
+`;
 
 const AchievementContent = styled.div`
   flex: 1;
@@ -1165,7 +1168,7 @@ const AchievementContent = styled.div`
       font-size: 0.95em;
     }
   }
-`
+`;
 
 const PDFButton = styled.button`
   position: fixed;
@@ -1198,6 +1201,6 @@ const PDFButton = styled.button`
   @media print {
     display: none !important;
   }
-`
+`;
 
-export default CVPage
+export default CVPage;

@@ -1,7 +1,18 @@
 import * as React from 'react';
-import Particles from '@tsparticles/react';
+import Particles, { initParticlesEngine } from '@tsparticles/react';
+import { loadSlim } from '@tsparticles/slim';
 
 const Particle = () => {
+  const [init, setInit] = React.useState(false);
+
+  React.useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setInit(true));
+  }, []);
+
+  if (!init) return null;
+
   return (
     <>
       <Particles

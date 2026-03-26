@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { InnerLayout } from '../styles/Layouts';
 import SmallTitle from './SmallTitle';
 import Title from './Title';
-import { BusinessCenter, School } from '@mui/icons-material';
+import BusinessCenter from '@mui/icons-material/BusinessCenter';
+import School from '@mui/icons-material/School';
 import ResumeItem from './ResumeItem';
 import { getExperienceForResume, getEducationForResume } from '../data/resume';
 

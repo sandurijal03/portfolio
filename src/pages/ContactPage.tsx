@@ -3,7 +3,9 @@ import { InnerLayout, MainLayout } from '../styles/Layouts';
 import styled from 'styled-components';
 import Title from '../components/Title';
 import PrimaryButton from '../components/PrimaryButton';
-import { Phone, Email, LocationOn } from '@mui/icons-material';
+import Phone from '@mui/icons-material/Phone';
+import Email from '@mui/icons-material/Email';
+import LocationOn from '@mui/icons-material/LocationOn';
 import ContactItem from '../components/ContactItem';
 
 const ContactPage = () => {

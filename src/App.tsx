@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Brightness4, Menu } from '@mui/icons-material';
+import Brightness4 from '@mui/icons-material/Brightness4';
+import Menu from '@mui/icons-material/Menu';
 import { IconButton, Switch as MUSwitch } from '@mui/material';
 
 import Sidebar from './components/Sidebar';

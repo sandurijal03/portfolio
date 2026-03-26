@@ -1,7 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Particle from '../components/Particle';
-import { LinkedIn, Twitter, GitHub } from '@mui/icons-material';
+import LinkedIn from '@mui/icons-material/LinkedIn';
+import Twitter from '@mui/icons-material/Twitter';
+import GitHub from '@mui/icons-material/GitHub';
 
 const HomePage = () => {
   return (

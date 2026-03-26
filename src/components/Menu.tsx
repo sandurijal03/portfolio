@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { GitHub, Pinterest } from '@mui/icons-material';
+import GitHub from '@mui/icons-material/GitHub';
+import Pinterest from '@mui/icons-material/Pinterest';
 import { Portfolios } from '../data/portfolios';
 
 type MenuProps = {
