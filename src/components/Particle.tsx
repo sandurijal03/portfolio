@@ -1,19 +1,18 @@
-import React from 'react';
-import Particles from 'react-particles';
+import * as React from 'react';
+import Particles from '@tsparticles/react';
 
 const Particle = () => {
   return (
     <>
       <Particles
-        width='100%'
-        height='100vh'
-        params={{
+        options={{
           particles: {
             number: {
               value: 109,
               density: {
                 enable: true,
-                value_area: 1200,
+                width: 1200,
+                height: 1200,
               },
             },
             color: {
@@ -21,14 +20,8 @@ const Particle = () => {
             },
             shape: {
               type: 'circle',
-              stroke: {
-                width: 0,
-              },
-              polygon: {
-                nb_sides: 6,
-              },
             },
-            line_linked: {
+            links: {
               enable: false,
               distance: 150,
               opacity: 0.9,
@@ -44,23 +37,26 @@ const Particle = () => {
               random: true,
               speed: 0.6,
               attract: {
-                rotateX: 600,
-                rotateY: 1200,
+                enable: false,
+                rotate: {
+                  x: 600,
+                  y: 1200,
+                },
               },
             },
             size: {
-              value: 4,
-              random: true,
-              anim: {
+              value: { min: 0.1, max: 4 },
+              animation: {
+                enable: true,
                 speed: 40,
-                size_min: 0.1,
               },
             },
             opacity: {
-              value: 0.8,
-              anim: {
+              value: { min: 0.1, max: 0.8 },
+              animation: {
+                enable: true,
                 speed: 1,
-                opacity_min: 0.1,
+                startValue: 'random',
               },
             },
           },

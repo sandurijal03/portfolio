@@ -7,7 +7,7 @@ import {
   LinkedIn,
   LocationOn,
   Twitter,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
 import { personalInfo, workExperience, education, skills } from '../data/resume'
 
 // Global print styles

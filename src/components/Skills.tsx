@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import { InnerLayout } from '../styles/Layouts'
-import Progress from './Progress'
-import Title from './Title'
-import { getSkillsForResume } from '../data/resume'
+import * as React from 'react';
+import styled from 'styled-components';
+import { InnerLayout } from '../styles/Layouts';
+import Progress from './Progress';
+import Title from './Title';
+import { getSkillsForResume } from '../data/resume';
 
 const Skills = () => {
-  const skillsData = getSkillsForResume()
+  const skillsData = getSkillsForResume();
 
   return (
     <SkillsStyled>
@@ -24,8 +24,8 @@ const Skills = () => {
         </div>
       </InnerLayout>
     </SkillsStyled>
-  )
-}
+  );
+};
 
 const SkillsStyled = styled.section`
   .skills {
@@ -38,6 +38,6 @@ const SkillsStyled = styled.section`
       grid-template-columns: repeat(1, 1fr);
     }
   }
-`
+`;
 
-export default Skills
+export default Skills;

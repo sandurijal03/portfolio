@@ -1,17 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
+import * as React from 'react';
+import styled from 'styled-components';
 
 type ReviewItemProps = {
-  text: string
-}
+  text: string;
+};
 
 const ReviewItem: React.FC<ReviewItemProps> = ({ text }) => {
   return (
     <ReviewItemStyled>
       <p>{text}</p>
     </ReviewItemStyled>
-  )
-}
+  );
+};
 
 const ReviewItemStyled = styled.div`
   height: 15vh;
@@ -34,6 +34,6 @@ const ReviewItemStyled = styled.div`
   p {
     padding: 1rem 0;
   }
-`
+`;
 
-export default ReviewItem
+export default ReviewItem;

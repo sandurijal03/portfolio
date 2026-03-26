@@ -1,18 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
-import Navigation from './Navigation'
+import * as React from 'react';
+import styled from 'styled-components';
+import Navigation from './Navigation';
 
 type SidebarProps = {
-  navToggle: boolean
-}
+  navToggle: boolean;
+};
 
 const Sidebar: React.FC<SidebarProps> = ({ navToggle }) => {
   return (
     <SidebarStyled className={`${navToggle ? 'navToggle' : ''}`} id='sidebar'>
       <Navigation />
     </SidebarStyled>
-  )
-}
+  );
+};
 
 const SidebarStyled = styled.div`
   width: 16.3rem;
@@ -26,6 +26,6 @@ const SidebarStyled = styled.div`
     transform: translateX(-100%);
     z-index: 20;
   }
-`
+`;
 
-export default Sidebar
+export default Sidebar;

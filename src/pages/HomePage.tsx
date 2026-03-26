@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import Particle from '../components/Particle'
-import { LinkedIn, Twitter, GitHub } from '@material-ui/icons'
+import * as React from 'react';
+import styled from 'styled-components';
+import Particle from '../components/Particle';
+import { LinkedIn, Twitter, GitHub } from '@mui/icons-material';
 
 const HomePage = () => {
   return (
@@ -37,8 +37,8 @@ const HomePage = () => {
         </div>
       </div>
     </HomePageStyled>
-  )
-}
+  );
+};
 
 const HomePageStyled = styled.header`
   width: 100%;
@@ -79,6 +79,6 @@ const HomePageStyled = styled.header`
       }
     }
   }
-`
+`;
 
-export default HomePage
+export default HomePage;

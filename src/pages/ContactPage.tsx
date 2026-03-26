@@ -1,15 +1,15 @@
-import React from 'react'
-import { InnerLayout, MainLayout } from '../styles/Layouts'
-import styled from 'styled-components'
-import Title from '../components/Title'
-import PrimaryButton from '../components/PrimaryButton'
-import { Phone, Email, LocationOn } from '@material-ui/icons'
-import ContactItem from '../components/ContactItem'
+import * as React from 'react';
+import { InnerLayout, MainLayout } from '../styles/Layouts';
+import styled from 'styled-components';
+import Title from '../components/Title';
+import PrimaryButton from '../components/PrimaryButton';
+import { Phone, Email, LocationOn } from '@mui/icons-material';
+import ContactItem from '../components/ContactItem';
 
 const ContactPage = () => {
-  const phone = <Phone />
-  const email = <Email />
-  const location = <LocationOn />
+  const phone = <Phone />;
+  const email = <Email />;
+  const location = <LocationOn />;
 
   return (
     <MainLayout>
@@ -21,7 +21,11 @@ const ContactPage = () => {
             <div className='contactTitle'>
               <h4>Get in touch</h4>
             </div>
-            <form className='form' method='post' action='mailto: sandurijal03@hotmail.com'>
+            <form
+              className='form'
+              method='post'
+              action='mailto: sandurijal03@hotmail.com'
+            >
               <div className='formField'>
                 <label htmlFor='name'>Enter your name</label>
                 <input type='text' id='name' />
@@ -73,8 +77,8 @@ const ContactPage = () => {
         </InnerLayout>
       </ContactPageStyled>
     </MainLayout>
-  )
-}
+  );
+};
 
 const ContactPageStyled = styled.section`
   .contact-section {
@@ -142,6 +146,6 @@ const ContactPageStyled = styled.section`
       }
     }
   }
-`
+`;
 
-export default ContactPage
+export default ContactPage;

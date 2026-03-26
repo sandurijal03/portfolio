@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
+import * as React from 'react';
+import styled from 'styled-components';
 
 type ResumeItemProps = {
-  year: string
-  title: string
-  subtitle: string
-  text: string
-}
+  year: string;
+  title: string;
+  subtitle: string;
+  text: string;
+};
 
 const ResumeItem: React.FC<ResumeItemProps> = ({
   year,
@@ -25,8 +25,8 @@ const ResumeItem: React.FC<ResumeItemProps> = ({
         <p>{text}</p>
       </div>
     </ResumeItemStyled>
-  )
-}
+  );
+};
 
 const ResumeItemStyled = styled.div`
   display: flex;
@@ -156,6 +156,6 @@ const ResumeItemStyled = styled.div`
       }
     }
   }
-`
+`;
 
-export default ResumeItem
+export default ResumeItem;
