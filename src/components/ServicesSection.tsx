@@ -1,11 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
-import { InnerLayout } from '../styles/Layouts'
-import ServiceCard from './ServiceCard'
-import Title from './Title'
-import design from '../img/design.svg'
-import intelligence from '../img/intelligence.svg'
-import gamedev from '../img/game-dev.svg'
+import * as React from 'react';
+import styled from 'styled-components';
+import { InnerLayout } from '../styles/Layouts';
+import ServiceCard from './ServiceCard';
+import Title from './Title';
+import design from '../img/design.svg';
+import intelligence from '../img/intelligence.svg';
+import gamedev from '../img/game-dev.svg';
 
 const ServicesSection = () => {
   return (
@@ -16,9 +16,7 @@ const ServicesSection = () => {
           <ServiceCard
             image={design}
             title={'Backend Development'}
-            paragraph={
-              'Rust, Javascript/Typescript,Dotnet'
-            }
+            paragraph={'Rust, Javascript/Typescript,Dotnet'}
           />
           <div className='midCard'>
             <ServiceCard
@@ -27,12 +25,16 @@ const ServicesSection = () => {
               paragraph={'React,Next'}
             />
           </div>
-          <ServiceCard image={gamedev} title={'Mobile App Development'} paragraph={'React Native'} />
+          <ServiceCard
+            image={gamedev}
+            title={'Mobile App Development'}
+            paragraph={'React Native'}
+          />
         </div>
       </ServicesSectionStyled>
     </InnerLayout>
-  )
-}
+  );
+};
 
 const ServicesSectionStyled = styled.section`
   .services {
@@ -52,6 +54,6 @@ const ServicesSectionStyled = styled.section`
       grid-template-columns: repeat(1, 1fr);
     }
   }
-`
+`;
 
-export default ServicesSection
+export default ServicesSection;

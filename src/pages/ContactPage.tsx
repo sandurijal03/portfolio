@@ -1,15 +1,15 @@
-import React from 'react'
-import { InnerLayout, MainLayout } from '../styles/Layouts'
-import styled from 'styled-components'
-import Title from '../components/Title'
-import PrimaryButton from '../components/PrimaryButton'
-import { Phone, Email, LocationOn } from '@mui/icons-material'
-import ContactItem from '../components/ContactItem'
+import * as React from 'react';
+import { InnerLayout, MainLayout } from '../styles/Layouts';
+import styled from 'styled-components';
+import Title from '../components/Title';
+import PrimaryButton from '../components/PrimaryButton';
+import { Phone, Email, LocationOn } from '@mui/icons-material';
+import ContactItem from '../components/ContactItem';
 
 const ContactPage = () => {
-  const phone = <Phone />
-  const email = <Email />
-  const location = <LocationOn />
+  const phone = <Phone />;
+  const email = <Email />;
+  const location = <LocationOn />;
 
   return (
     <MainLayout>
@@ -77,8 +77,8 @@ const ContactPage = () => {
         </InnerLayout>
       </ContactPageStyled>
     </MainLayout>
-  )
-}
+  );
+};
 
 const ContactPageStyled = styled.section`
   .contact-section {
@@ -146,6 +146,6 @@ const ContactPageStyled = styled.section`
       }
     }
   }
-`
+`;
 
-export default ContactPage
+export default ContactPage;

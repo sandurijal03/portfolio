@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
-import {
-  Brightness4,
-  Menu,
-  IconButton,
-  Switch as MUSwitch,
-} from '@mui/icons-material'
+import * as React from 'react';
+import styled from 'styled-components';
+import { Brightness4, Menu, Menu as IconButton } from '@mui/icons-material';
 
-import Sidebar from './components/Sidebar'
-import AboutPage from './pages/AboutPage'
-import BlogsPage from './pages/BlogsPage'
-import ContactPage from './pages/ContactPage'
-import HomePage from './pages/HomePage'
-import PortfolioPage from './pages/PortfolioPage'
-import ResumePage from './pages/ResumePage'
-import CVPage from './pages/CVPage'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Sidebar from './components/Sidebar';
+import AboutPage from './pages/AboutPage';
+import BlogsPage from './pages/BlogsPage';
+import ContactPage from './pages/ContactPage';
+import HomePage from './pages/HomePage';
+import PortfolioPage from './pages/PortfolioPage';
+import ResumePage from './pages/ResumePage';
+import CVPage from './pages/CVPage';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 export const Main = () => {
   const router = createBrowserRouter(
@@ -80,32 +75,32 @@ export const Main = () => {
     {
       basename: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
     },
-  )
-  return <RouterProvider router={router} />
-}
+  );
+  return <RouterProvider router={router} />;
+};
 
 type AppProps = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 const App: React.FC<AppProps> = ({ children }) => {
-  const [theme, setTheme] = useState('darkTheme')
-  const [checked, setChecked] = useState(false)
-  const [navToggle, setNavToggle] = useState(false)
+  const [theme, setTheme] = React.useState('darkTheme');
+  const [checked, setChecked] = React.useState(false);
+  const [navToggle, setNavToggle] = React.useState(false);
 
-  useEffect(() => {
-    document.documentElement.className = theme
-  }, [theme])
+  React.useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
 
   const themeToggler = () => {
     if (theme === 'lightTheme') {
-      setTheme('darkTheme')
-      setChecked(false)
+      setTheme('darkTheme');
+      setChecked(false);
     } else {
-      setTheme('lightTheme')
-      setChecked(true)
+      setTheme('lightTheme');
+      setChecked(true);
     }
-  }
+  };
 
   return (
     <div className='App'>
@@ -142,8 +137,8 @@ const App: React.FC<AppProps> = ({ children }) => {
         {children}
       </MainContentStyled>
     </div>
-  )
-}
+  );
+};
 
 const MainContentStyled = styled.main`
   position: relative;
@@ -171,6 +166,6 @@ const MainContentStyled = styled.main`
       background-color: var(--border-color);
     }
   }
-`
+`;
 
-export default App
+export default App;

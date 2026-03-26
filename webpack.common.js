@@ -1,5 +1,5 @@
-const path = require('path')
-const HtmlWebapackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const HtmlWebapackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -65,8 +65,15 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
   },
-  plugins: [new HtmlWebapackPlugin({ template: './public/index.html' })],
+  plugins: [
+    new HtmlWebapackPlugin({ template: './public/index.html' }),
+    new HtmlWebapackPlugin({
+      template: './public/404.html',
+      filename: '404.html',
+      inject: false,
+    }),
+  ],
   optimization: {
     usedExports: true,
   },
-}
+};

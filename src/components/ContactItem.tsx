@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
+import * as React from 'react';
+import styled from 'styled-components';
 
 type ContactItemProps = {
   icon: Element | any;
-  title: string
-  contact1: string
-  contact2?: string
-}
+  title: string;
+  contact1: string;
+  contact2?: string;
+};
 
 const ContactItem: React.FC<ContactItemProps> = ({
   icon,
@@ -25,8 +25,8 @@ const ContactItem: React.FC<ContactItemProps> = ({
         <p>{contact2}</p>
       </div>
     </ContactItemStyled>
-  )
-}
+  );
+};
 
 const ContactItemStyled = styled.div`
   padding: 1.5rem 2rem;
@@ -58,6 +58,6 @@ const ContactItemStyled = styled.div`
       padding: 0.1rem 0;
     }
   }
-`
+`;
 
-export default ContactItem
+export default ContactItem;

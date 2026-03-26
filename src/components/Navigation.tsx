@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
-import avatar from '../img/dp.jpeg'
+import * as React from 'react';
+import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
+import avatar from '../img/dp.jpeg';
 
 const Navigation = () => {
   return (
@@ -64,8 +64,8 @@ const Navigation = () => {
         <p>@{new Date().getFullYear()} My Portfolio</p>
       </footer>
     </NavigationStyled>
-  )
-}
+  );
+};
 
 const NavigationStyled = styled.nav`
   display: flex;
@@ -140,6 +140,6 @@ const NavigationStyled = styled.nav`
       text-align: center;
     }
   }
-`
+`;
 
-export default Navigation
+export default Navigation;

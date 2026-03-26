@@ -1,11 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
-import { GitHub, Pinterest } from '@mui/icons-material'
-import { Portfolios } from '../data/portfolios'
+import * as React from 'react';
+import styled from 'styled-components';
+import { GitHub, Pinterest } from '@mui/icons-material';
+import { Portfolios } from '../data/portfolios';
 
 type MenuProps = {
-  menuItem: Portfolios[]
-}
+  menuItem: Portfolios[];
+};
 
 const Menu: React.FC<MenuProps> = ({ menuItem }) => {
   return (
@@ -33,11 +33,11 @@ const Menu: React.FC<MenuProps> = ({ menuItem }) => {
               <p>{item.text}</p>
             </div>
           </div>
-        )
+        );
       })}
     </MenuStyled>
-  )
-}
+  );
+};
 
 const MenuStyled = styled.div`
   display: grid;
@@ -144,6 +144,6 @@ const MenuStyled = styled.div`
       }
     }
   }
-`
+`;
 
-export default Menu
+export default Menu;

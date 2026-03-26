@@ -1,18 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
-import { InnerLayout } from '../styles/Layouts'
-import SmallTitle from './SmallTitle'
-import Title from './Title'
-import { BusinessCenter, School } from '@mui/icons-material'
-import ResumeItem from './ResumeItem'
-import { getExperienceForResume, getEducationForResume } from '../data/resume'
+import * as React from 'react';
+import styled from 'styled-components';
+import { InnerLayout } from '../styles/Layouts';
+import SmallTitle from './SmallTitle';
+import Title from './Title';
+import { BusinessCenter, School } from '@mui/icons-material';
+import ResumeItem from './ResumeItem';
+import { getExperienceForResume, getEducationForResume } from '../data/resume';
 
 const Resume = () => {
-  const briefCase = <BusinessCenter />
-  const school = <School />
+  const briefCase = <BusinessCenter />;
+  const school = <School />;
 
-  const workExperience = getExperienceForResume()
-  const educationData = getEducationForResume()
+  const workExperience = getExperienceForResume();
+  const educationData = getEducationForResume();
 
   return (
     <ResumeStyled>
@@ -48,8 +48,8 @@ const Resume = () => {
         </div>
       </InnerLayout>
     </ResumeStyled>
-  )
-}
+  );
+};
 
 const ResumeStyled = styled.section`
   .smallTitle {
@@ -80,6 +80,6 @@ const ResumeStyled = styled.section`
       opacity: 0.7;
     }
   }
-`
+`;
 
-export default Resume
+export default Resume;

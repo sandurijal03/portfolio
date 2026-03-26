@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import resume from '../img/main.jpg';
 import cv from '../img/sandip_rijal_cv.pdf';

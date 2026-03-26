@@ -1,17 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
+import * as React from 'react';
+import styled from 'styled-components';
 
 type PrimaryButtonProps = {
-  title: string
-}
+  title: string;
+};
 
 const PrimaryButton: React.FC<PrimaryButtonProps> = ({ title }) => {
-  return (
-    <PrimaryButtonStyled >
-      {title}
-    </PrimaryButtonStyled>
-  )
-}
+  return <PrimaryButtonStyled>{title}</PrimaryButtonStyled>;
+};
 
 const PrimaryButtonStyled = styled.a`
   background-color: var(--primary-color);
@@ -37,6 +33,6 @@ const PrimaryButtonStyled = styled.a`
     width: 100%;
     background-color: var(--white-color);
   }
-`
+`;
 
-export default PrimaryButton
+export default PrimaryButton;
