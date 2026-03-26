@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
+    filename: '[name].[contenthash:8].js',
     chunkFilename: '[name].[contenthash:8].js',
     assetModuleFilename: 'assets/[name][ext]',
     publicPath: '/',
