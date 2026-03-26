@@ -5,13 +5,13 @@ import Menu from '@mui/icons-material/Menu';
 import { IconButton, Switch as MUSwitch } from '@mui/material';
 
 import Sidebar from './components/Sidebar';
-import AboutPage from './pages/AboutPage';
-import BlogsPage from './pages/BlogsPage';
-import ContactPage from './pages/ContactPage';
-import HomePage from './pages/HomePage';
-import PortfolioPage from './pages/PortfolioPage';
-import ResumePage from './pages/ResumePage';
-import CVPage from './pages/CVPage';
+const AboutPage = React.lazy(() => import('./pages/AboutPage'));
+const BlogsPage = React.lazy(() => import('./pages/BlogsPage'));
+const ContactPage = React.lazy(() => import('./pages/ContactPage'));
+const HomePage = React.lazy(() => import('./pages/HomePage'));
+const PortfolioPage = React.lazy(() => import('./pages/PortfolioPage'));
+const ResumePage = React.lazy(() => import('./pages/ResumePage'));
+const CVPage = React.lazy(() => import('./pages/CVPage'));
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 export const Main = () => {
@@ -21,7 +21,9 @@ export const Main = () => {
         path: '/',
         element: (
           <App>
-            <HomePage />
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <HomePage />
+            </React.Suspense>
           </App>
         ),
       },
@@ -29,7 +31,9 @@ export const Main = () => {
         path: '/works',
         element: (
           <App>
-            <PortfolioPage />
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <PortfolioPage />
+            </React.Suspense>
           </App>
         ),
       },
@@ -37,7 +41,9 @@ export const Main = () => {
         path: '/blogs',
         element: (
           <App>
-            <BlogsPage />
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <BlogsPage />
+            </React.Suspense>
           </App>
         ),
       },
@@ -45,7 +51,9 @@ export const Main = () => {
         path: '/resume',
         element: (
           <App>
-            <ResumePage />
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <ResumePage />
+            </React.Suspense>
           </App>
         ),
       },
@@ -53,7 +61,9 @@ export const Main = () => {
         path: '/contact',
         element: (
           <App>
-            <ContactPage />
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <ContactPage />
+            </React.Suspense>
           </App>
         ),
       },
@@ -61,7 +71,9 @@ export const Main = () => {
         path: '/cv',
         element: (
           <App>
-            <CVPage />
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <CVPage />
+            </React.Suspense>
           </App>
         ),
       },

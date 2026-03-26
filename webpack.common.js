@@ -8,7 +8,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
+    chunkFilename: '[name].[contenthash:8].js',
     assetModuleFilename: 'assets/[name][ext]',
+    publicPath: '/',
+    clean: true,
   },
   module: {
     rules: [
